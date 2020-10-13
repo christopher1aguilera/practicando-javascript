@@ -9,24 +9,24 @@ form.addEventListener("submit", function(event) {
   }
 })
 function  validName() {
-  let name = document.getElementById("nombre").value
+  let name = document.querySelector("#nombre").value
   let patter = /^[A-Za-z\s\u00C0-\u00FF]+/g
-  let nameError = document.getElementsByClassName("errorNombre")[0]
-  if (pattern.test(name)) {
-    nameError = ""
+  let nameError = document.querySelector(".errorNombre")
+  if (patter.test(name)) {
+    nameError.style.display = "none"
     return true
   }
   else {
-    nameError.innerText = "malo nombre"
+    document.querySelector(".errorNombre").innerHTML = "malo nombre"
 }
 }
 
 function  validSubject() {
-  let asunto = document.getElementById("asunto")
+  let subject = document.querySelector("#asunto").value
   let patter = /^[A-Za-z\s\u00C0-\u00FF]+/g
-  let subjectError = document.getElementsByClassName("errorAsunto")
-  if (pattern.test(subject)) {
-    subjectError = ""
+  let subjectError = document.querySelector(".errorAsunto")
+  if (patter.test(subject)) {
+    subjectError.style.display = "none"
     return true
   }
   else {
@@ -35,11 +35,11 @@ function  validSubject() {
 }
 
 function  validMessage() {
-  let message = document.getElementById("mensaje")
+  let message = document.querySelector("#mensaje").value
   let patter = /^[A-Za-z\s\u00C0-\u00FF]+/g
-  let messageError = document.getElementsByClassName("errorMensaje")
-  if (pattern.test(message)) {
-    messageError = ""
+  let messageError = document.querySelector(".errorMensaje")
+  if (patter.test(message)) {
+    messageError.style.display = "none"
     return true
   }
   else {
